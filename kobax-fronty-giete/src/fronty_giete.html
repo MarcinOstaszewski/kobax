@@ -1,0 +1,375 @@
+<!--<Deject>-->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARZ NA FRONTY MEBLOWE GIĘTE</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body>
+  
+  <!--</Deject>-->
+    <section class="page-a4">
+      <!-- inject:styles -->
+      <header>
+        <div class="info-by-receiver pointer-events-none">
+          <label for="date-of-receive">Data przyjęcia:</label>
+          <input id="date-of-receive" name="date-of-receive" class="control-cell bottom-dotted w-20mm" type="text">
+          <label for="date-of-receipt">Data odbioru:</label>
+          <input id="date-of-receipt" name="date-of-receipt" class="control-cell bottom-dotted w-20mm" type="text">
+          <label for="advance-payment">Zaliczka:</label>
+          <input id="advance-payment" name="advance-payment" class="control-cell bottom-dotted w-20mm" type="number">
+          <label for="client-number"><strong>NR KLIENTA:</strong></label>
+          <input id="client-number" name="client-number" class="control-cell bottom-dotted w-20mm" type="number">
+        </div>
+        <div class="align-center flex-column">
+          <h4 class="order-heading">
+            <label for="order-number">FORMULARZ NA FRONTY MEBLOWE GIĘTE NR</label>
+            <input id="order-number" name="order-number" type="text" class="control-cell w-40mm bottom-dotted pointer-events-none">
+          </h4>
+        </div>
+        <strong class="visible-on-hover">Tę część formularza wypełnia przyjmujący</strong>
+      </header>
+
+      <main class="">
+        <form id="fronty-giete">
+          <table id="top-table" class="top-table border-bold">
+            <tr>
+              <td class=" title-cell" width="13%"><label for="article">ARTYKUŁ</label></td>
+              <td class="" width="19%">
+                <input id="article" name="article" class="control-cell" type="text" min="0" max="999" required>
+              </td>
+              <td class=" title-cell" width="10%"><label for="border">KRAWĘDŹ</label></td>
+              <td class="" width="12%">
+                <input id="border" name="border" class="control-cell" type="text" min="0" max="999" required>
+              </td>
+              <td class=" title-cell" width="14%"><label for="thickness">GRUBOŚĆ<i class="text-xs">(mm)</i></label></td>
+              <td colspan="2" class="" width="30">
+                <input id="thickness" name="thickness" class="control-cell" type="text" required>
+              </td>
+            </tr>
+            <tr>
+              <td class="title-cell"><label for="color">KOLOR <i>(folia, lakier)</i></label></td>
+              <td class="display-flex border-none">
+                <select id="color" name="color" class="control-cell col-1 border-right" required>
+                  <option value="">proszę wybrać</option>
+                  <option value="folia">FOLIA</option>
+                  <option value="lakier">LAKIER</option>
+                  <option value="surowe">SUROWE</option>
+                </select>
+                <input id="color-symbol" name="color-symbol" class="control-cell col-6 border-left" type="text" required>
+              </td>
+              <td class="title-cell">PROFIL R</td>
+              <td>
+                <input id="profile" name="profile" class="control-cell" type="text" min="0" max="999" required>
+              </td>
+              <td rowspan="2" class="title-cell">SPOSÓB DOSTAWY</td>
+              <td class="col-3 title-cell"><label for="shipment">WYSYŁKA</label></td>
+              <td class="col-1 align-center">
+                <input id="shipment" name="delivery" class="control-cell form-check-input" type="radio" value="shipment" required>
+              </td>
+            </tr>
+            <tr>
+              <td class="title-cell"><label for="veneer">OKLEINA <i>(symbol)</i></label></td>
+              <td colspan="3">
+                <input id="veneer" name="veneer" class="control-cell" type="text" required>
+              </td>
+              <td class="title-cell"><label for="personal-collection">ODBIÓR OSOBISTY</label></td>
+              <td class="align-center">
+                <input id="personal-collection" name="delivery" class="control-cell form-check-input" type="radio" value="personal-collection" required>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="title-cell">
+                <label for="patine">PATYNA <i>(brak, jednolita[PJ], stara[PS], jednolita ciemne rogi [PJCR])</i></label>
+              </td>
+              <td colspan="3">
+                <div class="display-flex">
+                  <select id="patine" name="patine" class="control-cell border-right col-8" required>
+                    <option value="brak">BRAK</option>
+                    <option value="jednolita">JEDNOLITA</option>
+                    <option value="stara">STARA</option>
+                    <option value="jednolita-ciemne-rogi">JEDNOLITA CIEMNE ROGI</option>
+                  </select>
+                  <select id="patine-color" name="patine-color" class="control-cell col-4">
+                    <option value=""> </option>
+                    <option value="bialy">biały</option>
+                    <option value="czarny">czarny</option>
+                    <option value="brazowy">brązowy</option>
+                    <option value="popielaty">popielaty</option>
+                    <option value="zloty">złoty</option>
+                    <option value="srebrny">srebrny</option>
+                    <option value="miedziany">miedziany</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4" class="title-cell"><label for="lacquer">LAKIER</label></td>
+              <td colspan="3">
+                <select id="lacquer" name="lacquer" class="control-cell" required>
+                  <option value="brak">BRAK</option>
+                  <option value="mat">MAT</option>
+                  <option value="mat-strukturalny">MAT STRUKTURALNY</option>
+                  <option value="polysk">POŁYSK</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+
+          <img src="assets/instructions.png" width="100%" alt="instrukcja wypełnienia formularza" class="instruction-image">
+
+          <div class="notes-container">
+            <strong class="text-warning">Nastąpiła zmiana w podawaniu rozmiaru drzwi giętych - wpisujemy wymiar rzeczywisty, samemu trzeba odjąć szczeliny między drzwiami.</strong>
+            <div>
+              We frontach giętych występują pewne odkształcenia po klejeniu (nawet kilka frontów giętych o tym samym łuku może mieć nieco inną
+              krzywiznę) dlatego szafki należy wykonywać po otrzymaniu frontów giętych-nie odwrotnie!
+            </div>
+          </div>
+  
+          <div class="middle-tables-container">
+            <div class="selectors-container">
+              <div class="notes">
+                <span class="text-sm">
+                  <strong>Zaznacz wymiary na rysunkach!</strong> Wymiary proszę podawać w mm
+                </span>
+              </div>
+              <div class="selectors-column">
+                <div class="row left-doors"></div>
+                <div class="row right-doors"></div>
+                <div class="row concave-doors"></div>
+              </div>
+            </div>
+            <div class="legend-container">
+              <strong>
+                <div class="important-info">
+                  Ze względów technologicznych, dla frontów giętych dostępne są wyłącznie następujące krawędzie: R1, R3, R10, Mydło, Mydło faza (w przypadku zamawiania drzwi giętych w komplecie z prostymi istnieje możliwość bezpłatnej zmiany krawędzi frontów prostych)
+                </div>
+              </strong>
+              <p>
+                <strong class="text-warning">UWAGA!</strong><br />
+                Bez względu na grubość 18mm wymiary będą robione od tyłu (tzn. lewej strony drzwi). Trzeba zwrócić uwagę na miary, czy „kryjemy” kant lub łączymy drzwi gięte z prostymi (w takim wypadku lepiej zrobić front nietypowy płaski jak gięty).
+              </p>
+              <p>
+                Aby uniknąć pomyłki typu drzwi lewe czy prawe-witryna czy pełne oraz czy drzwi będą montowane w pionie (jedne na drugim) wprowadzamy obowiązkowo rysunki drzwi z zaznaczonymi uchwytami.
+              </p>
+              <p>
+                <strong>Fronty gięte frezowane wykonujemy do wymiaru: surowe, foliowane, lakierowane - 300mm x 300mm wys. 920mm.</strong>
+              </p>
+              <p>
+                W przypadku przekroczenia <strong class="text-underline">jednego z wymiarów:</strong> szerokość: 300 mm, głębokość: 300 mm, wysokość: 920 mm.<br/>
+                <strong class="text-underline">Wykonujemy wyłącznie fronty gięte surowe nieobrabiane.</strong>
+              </p>
+              <p>
+                <strong>Połączenia frontów</strong><br />
+                (wpisz odpowiednie numery rysunków, które wskażą jak poszczególne fronty mają być połączone, np.: 1+2, 3+8 itp.) 
+              </p>
+              <textarea id="connections" name="connections" class="control-cell connections" type="text" rows="5"></textarea>
+            </div>
+          </div>
+  
+          <table class="orderer-table text-md border-bold">
+            <tr>
+              <td colspan="4" class="align-center title-cell">ZAMAWIAJĄCY</td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="col-2"><label for="name-surname">Nazwa<br />Imię i nazwisko<sup>&nbsp;*</sup></label></td>
+              <td rowspan="2" class="col-4 p-0">
+                <textarea id="name-surname" name="name-surname"class="control-cell" type="text" required rows="5"></textarea>
+              </td>
+              <td class="col-2 h-6mm"><label for="nip">NIP</label></td>
+              <td class="col-4 p-0">
+                <input id="nip" name="nip" class="control-cell" type="number" required>
+              </td>
+            </tr>
+            <tr>
+              <td class="h-6mm"><label for="email">E-mail<sup>&nbsp;*</sup></label></td>
+              <td class="p-0">
+                <input id="email" name="email" class="control-cell h-6mm" type="email" required>
+              </td>
+              
+            </tr>
+            <tr>
+              <td rowspan="2"><label for="address">Adres<sup>&nbsp;*</sup></label></td>
+              <td rowspan="2" class="p-0">
+                <textarea id="address" name="address" class="control-cell" type="text" required rows="5"></textarea>
+              </td>
+              <td class="h-6mm"><label for="phone">Nr tel.<sup>&nbsp;*</sup></label></td>
+              <td class="p-0">
+                <input id="phone" name="phone" class="control-cell" type="number" required>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="rodo-consent-container">
+                  <label><sup>*</sup><span>&nbsp;Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z realizacją zamówienia.</span>
+                    <input type="checkbox" id="zgoda-rodo" name="zgoda-rodo" class="rodo-consent">
+                  </label>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </main>
+  
+      <footer>
+        <div class="signatures">
+          <div class="flex-column align-center">
+            <input id="orderer-signature" name="orderer-signature" class="control-cell bottom-dotted w-40mm" type="text">
+            <span class="text-sm">( podpis zamawiającego )</span>
+          </div>
+          <button id="print-page" name="print-page" class="form-button default-button no-print">WYDRUKUJ</button>
+          <button id="send-order" name="send-order" class="form-button default-button no-print" type="submit">WYŚLIJ</button>
+          <div class="flex-column align-center">
+            <input id="receipient-signature" name="receipient-signature" class="control-cell bottom-dotted w-40mm pointer-events-none" type="text">
+            <span class="text-sm">( podpis przyjmującego )</span>
+          </div>
+        </div>
+        <div class="footnotes">
+          <div>
+            <div class="display-flex justify-between text-sm">
+              <div>
+                <div>Za błędne wypełnienie formularza odpowiedzialność ponosi zamawiający</div>
+                <div>Złożenie zamówienia jest równoznaczne z zapoznaniem się z warunkami gwarancji i reklamacji firmy KOBAX</div>
+              </div>
+              <div><sup>*&nbsp;</sup>pola obowiązkowe do uzupełnienia</div>
+            </div>
+          </div>
+          <div class="align-right pt-02">
+            <small>Zakład Handlowo-Produkcyjny „KOBAX” Pająk Krzysztof | Zebrzydowice 289A, 34-130 Kalwaria Zebrzydowska</small><br />
+            <small>NIP 551-000-42-29 | <a href="mailto:zakupy@kobax.pl" >zakupy@kobax.pl</a> | <a href="www.kobax.pl">www.kobax.pl</a> | tel. +48 33 876 70 83, +48 604 152 240</small>
+          </div>
+        </div>
+      </footer>
+    </section>
+    
+
+    <template id="left-door-selector">
+      <div class="select-container">
+        <img src="assets/door-left.png" alt="drzwi lewe" class="door-image">
+        <div class="number field-container"></div>
+        <div class="width field-container">
+          <input id="width" name="width" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="curvature field-container">
+          <input id="curvature" name="curvature" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="height field-container">
+          <input id="height" name="height" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="top-right field-container">
+          <input id="top-right" name="top-right" class="control-cell" type="checkbox" value="top-right">
+        </div>
+        <div class="kind field-container">
+          <select id="kind" name="kind" class="control-cell" required>
+            <option value="none"></option>
+            <option value="witryna">W</option>
+            <option value="pilaster">P</option>
+          </select>
+        </div>
+        <div class="bottom-right field-container">
+          <input id="bottom-right" name="bottom-right" class="control-cell" type="checkbox" value="bottom-right">
+        </div>
+        <div class="pieces field-container">
+          <span>szt.</span>
+          <input id="pieces" name="pieces" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+      </div>
+    </template>
+
+    <template id="right-door-selector">
+      <div class="select-container">
+        <img src="assets/door-right.png" alt="drzwi prawe" class="door-image">
+        <div class="number field-container"></div>
+        <div class="width field-container">
+          <input id="width" name="width" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="curvature field-container">
+          <input id="curvature" name="curvature" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="height field-container">
+          <input id="height" name="height" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="top-left field-container">
+          <input id="top-left" name="top-left" class="control-cell" type="checkbox" value="top-left">
+        </div>
+        <div class="kind field-container">
+          <select id="kind" name="kind" class="control-cell" required>
+            <option value="none"></option>
+            <option value="witryna">W</option>
+            <option value="pilaster">P</option>
+          </select>
+        </div>
+        <div class="bottom-left field-container">
+          <input id="bottom-left" name="bottom-left" class="control-cell" type="checkbox" value="bottom-left">
+        </div>
+        <div class="pieces field-container">
+          <span>szt.</span>
+          <input id="pieces" name="pieces" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+      </div>
+    </template>
+
+    <template id="concave-door-selector">
+      <div class="select-container">
+        <img src="assets/door-concave.png" alt="drzwi wklęsłe" class="door-image">
+        <div class="number field-container"></div>
+        <div class="width field-container">
+          <input id="width" name="width" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="curvature field-container">
+          <input id="curvature" name="curvature" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="height field-container">
+          <input id="height" name="height" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+        <div class="top-left field-container">
+          <input id="top-left" name="top-left" class="control-cell" type="checkbox" value="top-left">
+        </div>
+        <div class="top-right field-container">
+          <input id="top-right" name="top-right" class="control-cell" type="checkbox" value="top-right">
+        </div>
+        <div class="kind field-container">
+          <select id="kind" name="kind" class="control-cell" required>
+            <option value="none"></option>
+            <option value="witryna">W</option>
+            <option value="pilaster">P</option>
+          </select>
+        </div>
+        <div class="bottom-left field-container">
+          <input id="bottom-left" name="bottom-left" class="control-cell" type="checkbox" value="bottom-left">
+        </div>
+        <div class="bottom-right field-container">
+          <input id="bottom-right" name="bottom-right" class="control-cell" type="checkbox" value="bottom-right">
+        </div>
+        <div class="pieces field-container">
+          <span>szt.</span>
+          <input id="pieces" name="pieces" class="control-cell" type="number" min="0" max="1200" required>
+        </div>
+      </div>
+    </template>
+  
+    <dialog class="warning-dialog" id="invalid-form-warning">
+      <div class="dialog-content align-center">
+        <strong class="dialog-info">Prosimy o wypełnienie wszystkich wymaganych pól.</strong>
+        <p>Pola wymagane zostały zaznaczone kolorem czerwonym.</p>
+        <button class="form-button default-button">OK</button>
+      </div>
+    </dialog>
+  
+    <dialog class="warning-dialog" id="reset-form-warning">
+      <div class="dialog-content align-center flex-column">
+        <div class="display-flex justify-end">&times;</div>
+        <strong class="dialog-info">Wyczyścić wszystkie pola formularza?</strong>
+        <button id="confirm-form-reset" class="form-button reset-button ">WYCZYŚĆ</button>
+      </div>
+    </dialog>
+    <!-- inject:scripts -->
+    <!--<Deject>-->
+  
+    <script src="scripts/index.js"></script>
+  </body>
+  </html>
+  <!--</Deject>-->
